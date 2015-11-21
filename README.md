@@ -8,5 +8,13 @@ The [bordershare.gr](bordershare.gr) source code.
 
 ## Develop Workflow
 
-`jekyll serve --watch`
+```
+gulp watch
+jekyll serve --watch
+```
 
+`gulp watch` watches .js and runs `gulp scripts`
+
+## License
+
+MIT

@@ -20,3 +20,7 @@ gulp.task('scripts', function () {
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('./scripts/'));
 });
+
+gulp.task('watch', function () {
+  gulp.watch(['./scripts/**/*.js'], ['scripts']);
+});
