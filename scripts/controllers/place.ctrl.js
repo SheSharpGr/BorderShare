@@ -1,6 +1,8 @@
 /**
  * @fileOverview The Places controller.
  */
+require('../services/place.service');
+
 var PlacesCtrl = module.exports = function($scope, $log, $location,
   placesService) {
 

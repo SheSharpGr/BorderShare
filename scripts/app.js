@@ -12,7 +12,6 @@
 
 require('angular/angular');
 require('angular-route/angular-route');
-require('angular-bootstrap/ui-bootstrap-tpls');
 
 /**
  * Master boot of angular app
@@ -26,8 +25,6 @@ angular.module('app', [
 
 // Require components
 require('./config/logger.config');
-require('./services/place.service');
-require('./services/place.ctrl');
 
 // Page scripts
 require('./parse');
