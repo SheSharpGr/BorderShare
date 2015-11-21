@@ -20,3 +20,8 @@ gulp.task('scripts', function () {
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('./static/'));
 });
+
+gulp.task('watch', function () {
+  gulp.watch(['./scripts/**/*.js'], ['scripts']);
+  // gulp.watch(['./_sass/**/*.scss'], ['styles']);
+});
