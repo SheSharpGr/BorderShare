@@ -7,7 +7,7 @@ var browserify = require('browserify');
 
 gulp.task('scripts', function () {
   var b = browserify({
-    entries: './scripts/app.js',
+    entries: './_scripts/app.js',
     debug: true
   });
 
@@ -18,5 +18,5 @@ gulp.task('scripts', function () {
       .pipe($.uglify())
       .on('error', $.util.log)
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('./static/'));
+    .pipe(gulp.dest('./scripts/'));
 });
