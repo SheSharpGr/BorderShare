@@ -4,6 +4,7 @@
 
 // load controllers
 require('../controllers/place.ctrl');
+require('../controllers/users.ctrl');
 
 /**
  * Application configuration, adding routes.
@@ -14,13 +15,22 @@ require('../controllers/place.ctrl');
 var routeConfig = module.exports = function ($routeProvider, $locationProvider) {
 
   // enable html5 routing
-  $locationProvider.html5Mode(true);
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false
+  });
 
   var partialsPath = 'ngtpl/';
 
   $routeProvider
     .when('/', {
       templateUrl: partialsPath + 'places.html',
+    })
+    .when('/signup', {
+      templateUrl: partialsPath + 'signup.html',
+    })
+    .when('/login', {
+      templateUrl: partialsPath + 'login.html',
     })
     .otherwise({
       redirectTo: '/'

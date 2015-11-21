@@ -19,13 +19,14 @@ var PlacesCtrl = module.exports = function($scope, $log, $location,
 
 /**
  * Initialize data...
- * 
+ *
  */
 PlacesCtrl.prototype.initData = function() {
-  this.placesService.get()
-    .then(function(res) {
-      console.log('CTRL:', res);
-    });
+  this.placesService.get();
+    // .success(function(data) {
+    //   this.data = data;
+    //   this.$log.log(this.data);
+    // });
 };
 
 angular.module('app')

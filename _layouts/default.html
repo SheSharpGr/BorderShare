@@ -4,12 +4,15 @@
   {% include head.html %}
 
   <body>
-    <base href="/" />
-    {% include header.html %}
+      <div class="container">
+        {% include header.html %}
 
-    {{ content }}
+        <div class="main">
+          {{ content }}
+        </div>
 
-    {% include footer.html %}
+        {% include footer.html %}
+      </div>
 
   </body>
 

@@ -24,7 +24,7 @@ angular.module('app', [
 
 
 // Templates
- 
+
 // Require components
 require('./config/logger.config');
 require('./config/route.config');
