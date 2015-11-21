@@ -6,16 +6,24 @@
 
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$color-orange: #e3621c;
+$color-darkbrown: #4f443d;
+$color-lightbrown: #99877b;
+$color-beige: #e8e5e2;
+$color-white: #fff;
+$color-black: #000;
+
+$title-font-family: "Patua One", "Times New Roman", serif;
+$base-font-family: "Noto Sans", Arial, sans-serif;
+$base-font-size:   14px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$text-color:       #000;
+$background-color: #f6f5f4;
+$brand-color:      $color-white;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
