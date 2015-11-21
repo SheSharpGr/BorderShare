@@ -22,6 +22,12 @@ var routeConfig = module.exports = function ($routeProvider, $locationProvider) 
     .when('/', {
       templateUrl: partialsPath + 'places.html',
     })
+    .when('/signup', {
+      templateUrl: partialsPath + 'signup.html',
+    })
+    .when('/login', {
+      templateUrl: partialsPath + 'login.html',
+    })
     .otherwise({
       redirectTo: '/'
     });
