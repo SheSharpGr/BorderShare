@@ -1,1 +1,3 @@
-require('./parse');
+require('angular');
+
+angular.module('app');
