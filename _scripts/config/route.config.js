@@ -4,6 +4,7 @@
 
 // load controllers
 require('../controllers/place.ctrl');
+require('../controllers/users.ctrl');
 
 /**
  * Application configuration, adding routes.
