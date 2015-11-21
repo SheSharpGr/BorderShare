@@ -23,5 +23,4 @@ gulp.task('scripts', function () {
 
 gulp.task('watch', function () {
   gulp.watch(['./scripts/**/*.js'], ['scripts']);
-  // gulp.watch(['./_sass/**/*.scss'], ['styles']);
 });
