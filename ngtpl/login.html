@@ -1,0 +1,15 @@
+<div class="row" ng-controller="UsersCtrl as usersCtrl">
+  <div class="col-md-12">
+    <form>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="jon@cab.tld" ng-model="usersCtrl.user.email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="*******" ng-model="usersCtrl.user.password">
+      </div>
+      <button class="btn btn-default" ng-click="usersCtrl.login()">Log in</button>
+    </form>
+  </div>
+</div>
