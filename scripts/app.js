@@ -25,6 +25,8 @@ angular.module('app', [
 // Templates
 
 // Require components
+require('./services/place.service');
+require('./services/place.ctrl');
 
 // Page scripts
 require('./parse');
