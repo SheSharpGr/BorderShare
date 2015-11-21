@@ -26,10 +26,6 @@ PlacesCtrl.prototype.initData = function() {
     .then(function(res) {
       console.log('CTRL:', res);
     });
-    // .success(function(data) {
-    //   this.data = data;
-    //   this.$log.log(this.data);
-    // });
 };
 
 angular.module('app')
