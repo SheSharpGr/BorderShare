@@ -15,7 +15,10 @@ require('../controllers/users.ctrl');
 var routeConfig = module.exports = function ($routeProvider, $locationProvider) {
 
   // enable html5 routing
-  $locationProvider.html5Mode(true);
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false
+  });
 
   var partialsPath = 'ngtpl/';
 
