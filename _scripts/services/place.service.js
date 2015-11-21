@@ -19,24 +19,21 @@ var PlacesService = module.exports = function ($http) {
  * @return {Promise} A Promise.
  */
 PlacesService.prototype.get = function () {
-  var Places = Parse.Object.extend('Test');
-  var query = new Parse.Query(Places);
-  // query.equalTo('city', 'Thessaloniki');
-  query.find({
-    success: function(results) {
-      console.log('GOT:', results);
-    },
-    error: function(error) {
-      console.error('ERROR:', error);
-    }
-  });
+  var Places = Parse.Object.extend('Places');
 
-  return this.$http({
-    method: 'GET',
-    url: 'https://api.parse.com/1/classes/Places'
-  })
-    .then(function(res) {
-      console.log('GOT RES:', res);
+  var query = new Parse.Query(Places);
+  
+  return query.find()
+    .then(function(results) {
+      // console.log('GOT:', results.toJSON());
+
+      var data = [];
+      for (var i = 0; i < results.length; i++) {
+        var object = results[i];
+        data.push(object.toJSON());
+      }
+
+      return data;
     });
 };
 
