@@ -1,3 +1,5 @@
+var Parse = require('parse');
+
 Parse.initialize('ka61YPSHXHZgsaVEUwIZpWeOvLoBD63sRgoBi85N', '7kKk2X1i2RKJVr19Dw7F2Gldq9tsf304GBP0thIe');
 
 var TestObject = Parse.Object.extend('TestObject');
