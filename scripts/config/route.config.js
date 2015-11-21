@@ -15,7 +15,7 @@ var routeConfig = module.exports = function ($routeProvider, $locationProvider) 
   // enable html5 routing
   $locationProvider.html5Mode(true);
 
-  var partialsPath = '';
+  var partialsPath = 'ngtpl';
 
   $routeProvider
     .when('/', {

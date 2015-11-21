@@ -17,7 +17,7 @@ var PlacesService = module.exports = function ($http) {
  *
  * @return {Promise} A Promise.
  */
-PlacesService.prototype.fetch = function () {
+PlacesService.prototype.get = function () {
   return this.$http({
     method: 'GET',
     url: '/summary',

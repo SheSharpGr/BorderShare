@@ -12,6 +12,10 @@ var PlacesCtrl = module.exports = function($scope, $log, $location,
 
 };
 
+/**
+ * Initialize data...
+ * 
+ */
 PlacesCtrl.prototype.initData = function() {
   this.placesService.get()
     .success(function(data) {
