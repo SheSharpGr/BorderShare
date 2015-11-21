@@ -1,6 +1,7 @@
 /**
  * @fileOverview Places Service.
  */
+var Parse = require('parse');
 
 /**
  * Places service.
@@ -18,25 +19,25 @@ var PlacesService = module.exports = function ($http) {
  * @return {Promise} A Promise.
  */
 PlacesService.prototype.get = function () {
-  return this.$http({
-    method: 'GET',
-    url: '/summary',
-    transformResponse: function (data) {
-      try {
-        data = JSON.parse(data);
-      } catch(ex) {
-        return data;
-      }
-
-      if (data && data.usage && data.usage.isPolicyCount) {
-        // in case of Count policy types reduce one from the usage count.
-        // kansas inits the value starting from 1.
-        data.usage.usage--;
-      }
-
-      return data;
+  var Places = Parse.Object.extend('Test');
+  var query = new Parse.Query(Places);
+  // query.equalTo('city', 'Thessaloniki');
+  query.find({
+    success: function(results) {
+      console.log('GOT:', results);
+    },
+    error: function(error) {
+      console.error('ERROR:', error);
     }
   });
+
+  return this.$http({
+    method: 'GET',
+    url: 'https://api.parse.com/1/classes/Places'
+  })
+    .then(function(res) {
+      console.log('GOT RES:', res);
+    });
 };
 
 angular.module('app')
