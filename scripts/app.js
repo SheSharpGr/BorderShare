@@ -25,6 +25,7 @@ angular.module('app', [
 // Templates
 
 // Require components
+require('./config/logger.config');
 require('./services/place.service');
 require('./services/place.ctrl');
 
