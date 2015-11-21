@@ -1,2 +1,5 @@
 # BorderShare
-BorderShare source code
+
+The [bordershare.gr](bordershare.gr) source code.
+
+
