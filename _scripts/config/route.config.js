@@ -2,6 +2,7 @@
  * @fileOverview Create and configure the routes.
  */
 
+// load controllers
 require('../controllers/place.ctrl');
 
 /**
@@ -15,7 +16,7 @@ var routeConfig = module.exports = function ($routeProvider, $locationProvider) 
   // enable html5 routing
   $locationProvider.html5Mode(true);
 
-  var partialsPath = 'ngtpl';
+  var partialsPath = 'ngtpl/';
 
   $routeProvider
     .when('/', {
