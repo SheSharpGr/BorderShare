@@ -2,7 +2,11 @@
 
 The [bordershare.gr](bordershare.gr) source code.
 
-## Run
+## Build the frontend app
+
+`gulp scripts`
+
+## Develop Workflow
 
 ```
 gulp watch

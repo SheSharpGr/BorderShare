@@ -23,11 +23,13 @@
     "parse": "^1.6.9"
   },
   "devDependencies": {
+    "angular-route": "^1.4.8",
     "gulp": "^3.9.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
+    "moment": "^2.10.6",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
