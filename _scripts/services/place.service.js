@@ -12,6 +12,8 @@ var Promise = require('bluebird');
  */
 var PlacesService = module.exports = function ($http) {
   this.$http = $http;
+  /** @type {?Array.<Object>} Cache data here */
+  this.data = null;
 };
 
 /**
@@ -20,10 +22,15 @@ var PlacesService = module.exports = function ($http) {
  * @return {Promise} A Promise.
  */
 PlacesService.prototype.get = Promise.method(function () {
+  if (this.data) {
+    return this.data;
+  }
+
   var Places = Parse.Object.extend('Places');
 
   var query = new Parse.Query(Places);
   
+  var self = this;
   return query.find()
     .then(function(results) {
       var data = [];
@@ -32,6 +39,7 @@ PlacesService.prototype.get = Promise.method(function () {
         data.push(object.toJSON());
       }
 
+      self.data = data;
       return data;
     });
 });

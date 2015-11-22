@@ -96,7 +96,6 @@ PlacesCtrl.prototype._setUniqueAreaItems = function(places) {
   this.filterAreaItemLabels = ['Όλες'];
 
   places.forEach(function(placeItem) {
-    console.log('placeItem:', placeItem.bigArea);
     if (typeof placeItem.bigArea !== 'string') {
       return;
     }
