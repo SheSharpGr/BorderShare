@@ -16,6 +16,30 @@ body>.container>div>.row{
   margin: 0;
 }
 
+.entry{
+  margin: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.entry-title{
+  background-color: $color-darkbrown;
+  color: $color-white;
+  padding: 10px 15px;
+}
+
+.entry-text{
+  background-color: $color-darkbeige;
+  padding: 5px 15px;
+}
+
+.tagline {
+  color: $color-beige;
+  position: relative;
+  top: -12px;
+}
+
+
 .no-margin-bottom{
   margin-bottom: 5px;
 }
@@ -34,13 +58,13 @@ header {
 
 .brand-logo{
   float: left;
+  margin-right: 25px;
 }
 
 .brand-name{
   font-size: 36px;
   font-family: $title-font-family;
   color: $brand-color;
-  float: left;
   padding-left: 25px;
 }
 
@@ -74,6 +98,10 @@ h3{
   font-size: 20px;
 }
 
+/**
+ * Filters
+ */
+
 .filters{
   border-top: 1px solid $color-orange;
   border-bottom: 1px solid $color-orange;
@@ -93,6 +121,7 @@ h3{
 
 }
 
+
 .entry{
   margin: 15px 0px;
   border-radius: 5px;
@@ -110,11 +139,9 @@ h3{
   padding: 5px 15px;
 }
 
-
-
 .area-filter-items {
-  margin: auto 10px;
-  padding: 0 10px;
+  margin: auto 20px;
+  padding: 0 20px;
 }
 
 .area-filter-items a {
@@ -127,6 +154,10 @@ h3{
 
 .area-filter-items a:hover {
   color: $color-darkbrown;
+  text-decoration: none;
+}
+
+.area-filter-items a:active {
   text-decoration: none;
 }
 
@@ -147,6 +178,10 @@ footer p{
 
 .sourcecode{
   text-align: right;
+}
+
+.area-filter-items.selectedfilter a {  
+  color: $color-darkbrown;
 }
 
 footer a, a:hover, a:visited{
