@@ -6,8 +6,7 @@
     <p>Το BorderShare διακινεί την πληροφορία σχετικά με το πως μπορείς να βοηθήσεις το πρόβλημα με τους πρόσφυγες. Συγκεντρώνουμε όλα τα σημεία δωρεάς αγαθών προς διανομή σε προσφυγικούς καταυλισμούς. Μπορείς να βοηθήσεις;</p>
   </div>
   <h1 class="no-margin-bottom">Places</h1>
-  
-  <div class="filters"> 
+  <div class="filters">
     <ul class="area-filter-items">
       <li>Περιοχές:&nbsp;</li>
       <li ng-repeat="areaFilter in placesCtrl.filterAreaItems">
@@ -33,8 +32,23 @@
           <div class="available" ng-bind="place.available"></div>
           <div class="collecticons">icon1, icon2</div>
           <div><a ng-href="/#!/place/{[{place.objectId}]}">Go to item</a></div>
+          <div class="collecticons">
+            <img src="/assets/img/icons/icon-accessories.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-adult-clothes.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-adult-food.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-baby-clothes.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-baby-food.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-blanket.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-children-clothes.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-hygiene-products.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-kitchenware.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-medicine.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-toys.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="row social">
   </div>
 </div>

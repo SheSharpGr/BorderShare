@@ -56,7 +56,7 @@ PlacesCtrl.prototype.initData = Promise.method(function() {
 
 /**
  * Setup the available filters.
- * 
+ *
  * @param {Array.<Object>} places The places.
  * @return {Promise} A Promise.
  */
@@ -80,7 +80,7 @@ PlacesCtrl.prototype.setupFilters = Promise.method(function(places) {
 
 /**
  * The area filter callback method.
- * 
+ *
  * @param {Object} placeItem The place item to examine.
  * @return {boolean} True / False.
  */
@@ -90,7 +90,7 @@ PlacesCtrl.prototype._areaFilter = function(placeItem) {
 
 /**
  * Get the unique filter area items from the places dataset.
- * 
+ *
  * @param {Array.<Object>} places The places.
  * @private
  */
