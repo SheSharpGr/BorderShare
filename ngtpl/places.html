@@ -1,79 +1,30 @@
-<div class="home" ng-app="app" ng-controller="PlacesCtrl as placesCtrl">
+<div class="home" ng-controller="PlacesCtrl as placesCtrl">
   <div class="row">
     <h1>Welcome</h1>
     <p>Lorem ipsum dolor sit ame consectetur adipiscing elit. Maecenas enim est, molestie et consectetur nec, dapibus et tellus. Cras at mauris quis turpis egestas scelerisque. Suspendisse at eros dolor. Cras eget massa nulla. Mauris in vehicula nibh. Donec erat lorem, tristique vitae efficitur sed, porttitor luctus arcu. Curabitur faucibus orci enim, vel luctus sapien blandit volutpat.</p>
   </div>
+  <h1 class="no-margin-bottom">Places</h1>
+  <div class="filters">
+    All / <strong>Kalamaria</strong> / Kentro / Ntepo
+  </div>
+
   <div class="row">
-    <h1 class="no-margin-bottom">Places</h1>
-    <div class="filters">
-      All / <strong>Kalamaria</strong> / Kentro / Ntepo
-    </div>
-
     <!-- ENTRIES -->
-    <div class="col-md-3">
+    <div class="col-md-3" ng-repeat="place in placesCtrl.places">
       <div class="entry">
         <div class="entry-title">
-          <div class="name"> Syllogos Bohthwn</div>
+          <div class="name" ng-bind="place.name"></div>
         </div>
         <div class="entry-text">
-          <div class="address">lalalalalalal</div>
-          <div class="available">Available (not)</div>
+          <div class="address">
+            <span ng-bind="place.address1"></span>
+            <span>, </span>
+            <span ng-bind="place.area"></span>
+          </div>
+          <div class="available" ng-bind="place.available"></div>
           <div class="collecticons">icon1, icon2</div>
         </div>
       </div>
     </div>
-
-    <div class="col-md-3">
-      <div class="entry">
-        <div class="entry-title">
-          <div class="name"> Syllogos Bohthwn</div>
-        </div>
-        <div class="entry-text">
-          <div class="address">lalalalalalal</div>
-          <div class="available">Available (not)</div>
-          <div class="collecticons">icon1, icon2</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="entry">
-        <div class="entry-title">
-          <div class="name"> Syllogos Bohthwn</div>
-        </div>
-        <div class="entry-text">
-          <div class="address">lalalalalalal</div>
-          <div class="available">Available (not)</div>
-          <div class="collecticons">icon1, icon2</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="entry">
-        <div class="entry-title">
-          <div class="name"> Syllogos Bohthwn</div>
-        </div>
-        <div class="entry-text">
-          <div class="address">lalalalalalal</div>
-          <div class="available">Available (not)</div>
-          <div class="collecticons">icon1, icon2</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="entry">
-        <div class="entry-title">
-          <div class="name"> Syllogos Bohthwn</div>
-        </div>
-        <div class="entry-text">
-          <div class="address">lalalalalalal</div>
-          <div class="available">Available (not)</div>
-          <div class="collecticons">icon1, icon2</div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
