@@ -1,7 +1,8 @@
 # Site settings
-title: BorderShare :: Share what you will! Help the Refugges.
+title: "BorderShare :: Share resources; Show solidarity with refugees"
+titleAlt: "Share resources; "
 email: info@bordershare.gr
-description: BorderShare is an information distributor for anything you can do to help the refugee problem. We collect all the refugee drop-in points for food, clothes and everything they might need.
+description: "BorderShare is an information distributor for anything you can do to help the refugee problem. We collect all the refugee drop-in points for food, clothes and everything they might need."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bordershare.gr" # the base hostname & protocol for your site
 twitter_username: BorderShare
