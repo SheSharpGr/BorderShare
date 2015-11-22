@@ -7,9 +7,7 @@
   </div>
   <h1 class="no-margin-bottom">Places</h1>
   
-  <div class="filters">
-    <h4>Area Filters</h4>
-    <span>Active: {[{ placesCtrl.activeAreaFilter }]}</span>
+  <div class="filters">   
     <ul class="area-filter-items">
       <li ng-repeat="areaFilter in placesCtrl.filterAreaItems">
         <a ng-href="/" title="Αφαιρέστε τα φίλτρα" ng-bind="placesCtrl.filterAreaItemLabels[$index]" ng-show="areaFilter == 'all'" ng-class="{selectedfilter: placesCtrl.activeAreaFilter === ''}"></a>

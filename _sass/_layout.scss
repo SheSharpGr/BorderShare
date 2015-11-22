@@ -92,8 +92,40 @@ h3{
   padding: 10px;
 }
 
-.entry{
+.filters ul {
+  list-style: none;
+  list-style-type: none;
+  color: $color-darkbeige;
+  font-family: $base-font-family;
+}
 
+.filters li {
+  display: inline;
+
+}
+
+.filters li:before {
+
+}
+
+
+
+.area-filter-items {
+  margin: auto 10px;
+  padding: 0 10px;
+}
+
+.area-filter-items a {
+  color: $color-lightbrown;
+}
+.area-filter-items a:link a:visited{
+  color: $color-lightbrown;
+  text-decoration: none;
+}
+
+.area-filter-items a:hover {
+  color: $color-darkbrown;
+  text-decoration: none;
 }
 
 footer {
@@ -102,6 +134,9 @@ footer {
   min-height: 60px;
 }
 
-.selectedfilter {
+.selectedfilter {  
   font-weight: bold;
+  color: $color-darkbrown;
 }
+
+
