@@ -4,7 +4,7 @@
     <p>Lorem ipsum dolor sit ame consectetur adipiscing elit. Maecenas enim est, molestie et consectetur nec, dapibus et tellus. Cras at mauris quis turpis egestas scelerisque. Suspendisse at eros dolor. Cras eget massa nulla. Mauris in vehicula nibh. Donec erat lorem, tristique vitae efficitur sed, porttitor luctus arcu. Curabitur faucibus orci enim, vel luctus sapien blandit volutpat.</p>
   </div>
   <h1 class="no-margin-bottom">Places</h1>
-  
+
   <div class="filters">
     <h4>Area Filters</h4>
     <span>Active: {[{ placesCtrl.activeAreaFilter }]}</span>
@@ -29,7 +29,9 @@
             <span ng-bind="place.area"></span>
           </div>
           <div class="available" ng-bind="place.available"></div>
-          <div class="collecticons">icon1, icon2</div>
+          <div class="collecticons">
+            <img src="/assets/img/mark.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+          </div>
         </div>
       </div>
     </div>
