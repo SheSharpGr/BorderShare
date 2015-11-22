@@ -266,3 +266,12 @@ footer a, footer a:hover, footer a:visited{
   font-weight: bold;
   color: $color-darkbrown;
 }
+
+.collecticons img {
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+.collecticons img:hover {
+  opacity: 1;
+}
