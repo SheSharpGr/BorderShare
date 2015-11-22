@@ -20,7 +20,7 @@ var routeConfig = module.exports = function ($routeProvider, $locationProvider) 
   //   enabled: false,
   //   requireBase: true,
   // }).hashPrefix('!');
-  $locationProvider.html5Mode(false);
+  $locationProvider.html5Mode(true).hashPrefix('!');
 
   var partialsPath = 'ngtpl/';
 

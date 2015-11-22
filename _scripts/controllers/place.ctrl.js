@@ -48,7 +48,7 @@ PlacesCtrl.prototype.initData = Promise.method(function() {
   return this.placesService.get()
     .bind(this)
     .then(function(data) {
-      this.$log.log('app.ctrl.PlacesCtrl() :: Got places:', data.length);
+      this.$log.log('app.ctrl.PlacesCtrl.initData() :: Got places:', data.length);
       this.allPlaces = data;
       return data;
     });
@@ -65,6 +65,9 @@ PlacesCtrl.prototype.setupFilters = Promise.method(function(places) {
 
   // check if we have area filters in place
   var query = this.$location.search();
+
+  this.$log.log('app.ctrl.PlacesCtrl.setupFilters() :: Active Filter:',
+    query.area, this.$location);
 
   if (query.area) {
     this.activeAreaFilter = query.area;
