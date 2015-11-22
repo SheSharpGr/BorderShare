@@ -18,10 +18,14 @@ require('angular-route/angular-route');
  * Master boot of angular app
  *
  */
-angular.module('app', [
+var ngApp = angular.module('app', [
   'ngRoute',
 ]);
 
+ngApp.config(['$interpolateProvider', function($interpolateProvider) {
+  $interpolateProvider.startSymbol('{[{');
+  $interpolateProvider.endSymbol('}]}');
+}]);
 
 // Templates
 
