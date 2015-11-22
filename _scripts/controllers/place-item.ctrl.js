@@ -30,7 +30,7 @@ var PlaceItemCtrl = module.exports = function($rootScope, $scope, $log, $locatio
   this.place = {};
 
   /** @type {Boolean} Indicates loading */
-  this.loading = true;
+  this.isLoading = true;
 
   /** @type {Boolean} Indicates if place item was not found */
   this.notFound = false;
@@ -62,7 +62,7 @@ PlaceItemCtrl.prototype.initData = Promise.method(function() {
         console.log(this.place);
       }
 
-      this.loading = false;
+      this.isLoading = false;
       return data;
     });
 });
