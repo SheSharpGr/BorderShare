@@ -1,15 +1,18 @@
 <div class="home" ng-controller="PlacesCtrl as placesCtrl">
   <div class="row">
-    <h1>Welcome</h1>
-    <p>Lorem ipsum dolor sit ame consectetur adipiscing elit. Maecenas enim est, molestie et consectetur nec, dapibus et tellus. Cras at mauris quis turpis egestas scelerisque. Suspendisse at eros dolor. Cras eget massa nulla. Mauris in vehicula nibh. Donec erat lorem, tristique vitae efficitur sed, porttitor luctus arcu. Curabitur faucibus orci enim, vel luctus sapien blandit volutpat.</p>
+    <h1>Welcome / Καλώς Ήρθατε</h1>
+    <p>BorderShare is an information distributor for anything you can do to help the refugee problem. We collect all the refugee drop-in points for food, clothes and everything they might need.</p>
+
+    <p>Το BorderShare διακινεί την πληροφορία σχετικά με το πως μπορείς να βοηθήσεις το πρόβλημα με τους πρόσφυγες. Συγκεντρώνουμε όλα τα σημεία δωρεάς αγαθών προς διανομή σε προσφυγικούς καταυλισμούς. Μπορείς να βοηθήσεις;</p>
   </div>
   <h1 class="no-margin-bottom">Places</h1>
-  
-  <div class="filters">   
+  <div class="filters">
     <ul class="area-filter-items">
+      <li>Περιοχές:&nbsp;</li>
       <li ng-repeat="areaFilter in placesCtrl.filterAreaItems">
         <a ng-href="/" title="Αφαιρέστε τα φίλτρα" ng-bind="placesCtrl.filterAreaItemLabels[$index]" ng-show="areaFilter == 'all'" ng-class="{selectedfilter: placesCtrl.activeAreaFilter === ''}"></a>
         <a ng-href="/?area={[{areaFilter}]}" title="Φιλτράρετε ανά περιοχή" ng-bind="placesCtrl.filterAreaItemLabels[$index]" ng-show="areaFilter != 'all'" ng-class="{selectedfilter: areaFilter === placesCtrl.activeAreaFilter}"></a>
+        <span ng-show="!$last">/</span>
       </li>
     </ul>
   </div>
@@ -28,8 +31,24 @@
           </div>
           <div class="available" ng-bind="place.available"></div>
           <div class="collecticons">icon1, icon2</div>
+          <div><a ng-href="/#!/place/{[{place.objectId}]}">Go to item</a></div>
+          <div class="collecticons">
+            <img src="/assets/img/icons/icon-accessories.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-adult-clothes.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-adult-food.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-baby-clothes.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-baby-food.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-blanket.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-children-clothes.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-hygiene-products.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-kitchenware.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-medicine.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-toys.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="row social">
   </div>
 </div>

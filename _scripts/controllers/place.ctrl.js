@@ -48,7 +48,7 @@ PlacesCtrl.prototype.initData = Promise.method(function() {
   return this.placesService.get()
     .bind(this)
     .then(function(data) {
-      this.$log.log('app.ctrl.PlacesCtrl() :: Got places:', data.length);
+      this.$log.log('app.ctrl.PlacesCtrl.initData() :: Got places:', data.length);
       this.allPlaces = data;
       return data;
     });
@@ -56,7 +56,7 @@ PlacesCtrl.prototype.initData = Promise.method(function() {
 
 /**
  * Setup the available filters.
- * 
+ *
  * @param {Array.<Object>} places The places.
  * @return {Promise} A Promise.
  */
@@ -65,6 +65,9 @@ PlacesCtrl.prototype.setupFilters = Promise.method(function(places) {
 
   // check if we have area filters in place
   var query = this.$location.search();
+
+  this.$log.log('app.ctrl.PlacesCtrl.setupFilters() :: Active Filter:',
+    query.area, this.$location);
 
   if (query.area) {
     this.activeAreaFilter = query.area;
@@ -77,7 +80,7 @@ PlacesCtrl.prototype.setupFilters = Promise.method(function(places) {
 
 /**
  * The area filter callback method.
- * 
+ *
  * @param {Object} placeItem The place item to examine.
  * @return {boolean} True / False.
  */
@@ -87,7 +90,7 @@ PlacesCtrl.prototype._areaFilter = function(placeItem) {
 
 /**
  * Get the unique filter area items from the places dataset.
- * 
+ *
  * @param {Array.<Object>} places The places.
  * @private
  */
@@ -96,7 +99,6 @@ PlacesCtrl.prototype._setUniqueAreaItems = function(places) {
   this.filterAreaItemLabels = ['Όλες'];
 
   places.forEach(function(placeItem) {
-    console.log('placeItem:', placeItem.bigArea);
     if (typeof placeItem.bigArea !== 'string') {
       return;
     }

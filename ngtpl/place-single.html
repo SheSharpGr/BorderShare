@@ -1,0 +1,49 @@
+<div class="place-item" ng-controller="PlaceItemCtrl as placeItemCtrl">
+  <div class="row">
+    <div class="col-md-8">
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th>Όνομα</th>
+            <td>{[{ placeItemCtrl.place.name }]}</td>
+          </tr>
+          <tr>
+            <th>Διεύθυνση</th>
+            <td>{[{ placeItemCtrl.place.address1 }]}, {[{ placeItemCtrl.place.area }]}<br />
+              {[{ placeItemCtrl.place.zipCode }]}, {[{ placeItemCtrl.place.city }]}
+            </td>
+          </tr>
+          <tr>
+            <th>Χρόνος Συλλογής</th>
+            <td>{[{ placeItemCtrl.place.available }]}</td>
+          </tr>
+          <tr>
+            <th>Συγκεντρώνουν</th>
+            <td>{[{ placeItemCtrl.place.collectingFull }]}</td>
+          </tr>
+          <tr>
+            <th>Τηλέφωνο 1</th>
+            <td>{[{ placeItemCtrl.place.telephone1 }]}</td>
+          </tr>
+          <tr ng-show="placeItemCtrl.place.telephone2">
+            <th>Τηλέφωνο 2</th>
+            <td>{[{ placeItemCtrl.place.telephone2 }]}</td>
+          </tr>
+          <tr ng-show="placeItemCtrl.place.telephone3">
+            <th>Τηλέφωνο 3</th>
+            <td>{[{ placeItemCtrl.place.telephone3 }]}</td>
+          </tr>
+          <tr ng-show="placeItemCtrl.place.telephone4">
+            <th>Τηλέφωνο 4</th>
+            <td>{[{ placeItemCtrl.place.telephone4 }]}</td>
+          </tr>
+
+          <tr>
+            <th>Σημειώσεις</th>
+            <td>{[{ placeItemCtrl.place.notes }]}</td>
+          </tr>
+        </tbody>
+      </table>      
+    </div>
+  </div>
+</div>

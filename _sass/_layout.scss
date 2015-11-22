@@ -8,6 +8,8 @@ body{
 body>.container{
   background-color: $color-beige;
   padding: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 body>.container>div>.row{
@@ -37,11 +39,12 @@ body>.container>div>.row{
   top: -12px;
 }
 
+
 .no-margin-bottom{
   margin-bottom: 5px;
 }
 
-.main>div>.row{
+.main>div>div>.row{
   margin-bottom: 50px;
 }
 
@@ -63,11 +66,14 @@ header {
   font-family: $title-font-family;
   color: $brand-color;
   padding-left: 25px;
-  margin-bottom: 
 }
 
 .capital{
   font-size: 41px;
+}
+
+.login{
+  text-align: right;
 }
 
 body>.container>.main{
@@ -93,7 +99,7 @@ h3{
 }
 
 /**
- * Site header
+ * Filters
  */
 
 .filters{
@@ -106,13 +112,31 @@ h3{
 .filters ul {
   list-style: none;
   list-style-type: none;
-  color: $color-darkbeige;
+  color: $color-darkbrown;
   font-family: $base-font-family;
 }
 
 .filters li {
   display: inline;
 
+}
+
+
+.entry{
+  margin: 15px 0px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.entry-title{
+  background-color: $color-darkbrown;
+  color: $color-white;
+  padding: 10px 15px;
+}
+
+.entry-text{
+  background-color: $color-darkbeige;
+  padding: 5px 15px;
 }
 
 .area-filter-items {
@@ -141,14 +165,80 @@ footer {
   color: $color-beige;
   background-color: $color-lightbrown;
   min-height: 60px;
+  padding: 30px 70px;
 }
 
-.selectedfilter {  
-  font-weight: bold;
-  color: $color-darkbrown;
+footer p{
+  margin-bottom: 0;
+}
+
+.info{
+  text-align: left;
+}
+
+.sourcecode{
+  text-align: right;
 }
 
 .area-filter-items.selectedfilter a {  
   color: $color-darkbrown;
 }
 
+footer a, a:hover, a:visited{
+  color: $color-white;
+}
+
+/* LOADER ANIMATION */
+
+.loader{
+  width: 67px;
+  height: 67px;
+  background: url('/assets/img/loader.png');
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  -webkit-animation: rotating 1.8s linear infinite;
+  -moz-animation: rotating 1.8s linear infinite;
+  -ms-animation: rotating 1.8s linear infinite;
+  -o-animation: rotating 1.8s linear infinite;
+  animation: rotating 1.8s linear infinite;
+}
+
+.selectedfilter {
+  font-weight: bold;
+  color: $color-darkbrown;
+}
