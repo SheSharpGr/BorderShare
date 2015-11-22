@@ -8,34 +8,19 @@ body{
 body>.container{
   background-color: $color-beige;
   padding: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 body>.container>div>.row{
   margin: 0;
 }
 
-.entry{
-  margin: 15px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.entry-title{
-  background-color: $color-darkbrown;
-  color: $color-white;
-  padding: 10px 15px;
-}
-
-.entry-text{
-  background-color: $color-darkbeige;
-  padding: 5px 15px;
-}
-
 .no-margin-bottom{
   margin-bottom: 5px;
 }
 
-.main>div>.row{
+.main>div>div>.row{
   margin-bottom: 50px;
 }
 
@@ -61,6 +46,10 @@ header {
 
 .capital{
   font-size: 41px;
+}
+
+.login{
+  text-align: right;
 }
 
 body>.container>.main{
@@ -93,11 +82,41 @@ h3{
 }
 
 .entry{
+  margin: 15px 0px;
+  border-radius: 5px;
+  overflow: hidden;
+}
 
+.entry-title{
+  background-color: $color-darkbrown;
+  color: $color-white;
+  padding: 10px 15px;
+}
+
+.entry-text{
+  background-color: $color-darkbeige;
+  padding: 5px 15px;
 }
 
 footer {
   color: $color-beige;
   background-color: $color-lightbrown;
   min-height: 60px;
+  padding: 30px 70px;
+}
+
+footer p{
+  margin-bottom: 0;
+}
+
+.info{
+  text-align: left;
+}
+
+.sourcecode{
+  text-align: right;
+}
+
+footer a, a:hover, a:visited{
+  color: $color-white;
 }
