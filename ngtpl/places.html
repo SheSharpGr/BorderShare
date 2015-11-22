@@ -4,10 +4,17 @@
     <p>Lorem ipsum dolor sit ame consectetur adipiscing elit. Maecenas enim est, molestie et consectetur nec, dapibus et tellus. Cras at mauris quis turpis egestas scelerisque. Suspendisse at eros dolor. Cras eget massa nulla. Mauris in vehicula nibh. Donec erat lorem, tristique vitae efficitur sed, porttitor luctus arcu. Curabitur faucibus orci enim, vel luctus sapien blandit volutpat.</p>
   </div>
   <h1 class="no-margin-bottom">Places</h1>
+  
   <div class="filters">
-    All / <strong>Kalamaria</strong> / Kentro / Ntepo
+    <h4>Area Filters</h4>
+    <span>Active: {[{ placesCtrl.activeAreaFilter }]}</span>
+    <ul class="area-filter-items">
+      <li ng-repeat="areaFilter in placesCtrl.filterAreaItems">
+        <a ng-href="/" title="Αφαιρέστε τα φίλτρα" ng-bind="placesCtrl.filterAreaItemLabels[$index]" ng-show="areaFilter == 'all'" ng-class="{selectedfilter: placesCtrl.activeAreaFilter === ''}"></a>
+        <a ng-href="/?area={[{areaFilter}]}" title="Φιλτράρετε ανά περιοχή" ng-bind="placesCtrl.filterAreaItemLabels[$index]" ng-show="areaFilter != 'all'" ng-class="{selectedfilter: areaFilter === placesCtrl.activeAreaFilter}"></a>
+      </li>
+    </ul>
   </div>
-
   <div class="row">
     <!-- ENTRIES -->
     <div class="col-md-3" ng-repeat="place in placesCtrl.places">
