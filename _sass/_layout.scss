@@ -272,6 +272,7 @@ footer a, footer a:hover, footer a:visited{
   color: $color-darkbrown;
 }
 
+
 .collecticons img {
   margin-bottom: 4px;
   opacity: 0.6;
@@ -279,4 +280,9 @@ footer a, footer a:hover, footer a:visited{
 
 .collecticons img:hover {
   opacity: 1;
+}
+
+.share ul li {
+  float: left;
+  padding-right: 10px;
 }
