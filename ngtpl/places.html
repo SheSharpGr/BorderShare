@@ -1,9 +1,38 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=187318774651877";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="home" ng-controller="PlacesCtrl as placesCtrl">
   <div class="row">
     <h1>Welcome / Καλώς Ήρθατε</h1>
     <p>BorderShare is an information distributor for anything you can do to help the refugee problem. We collect all the refugee drop-in points for food, clothes and everything they might need.</p>
 
     <p>Το BorderShare διακινεί την πληροφορία σχετικά με το πως μπορείς να βοηθήσεις το πρόβλημα με τους πρόσφυγες. Συγκεντρώνουμε όλα τα σημεία δωρεάς αγαθών προς διανομή σε προσφυγικούς καταυλισμούς. Μπορείς να βοηθήσεις;</p>
+  </div>
+  <h3>Share the love</h3>
+  <div class="row">
+    <div class="col-lg-8 share">
+      <ul class="nav">
+        <li>
+          <a href="https://twitter.com/share" data-url="http://bordershare.gr/" data-text="Share resources; Show solidarity with refugees " data-size="medium" via="BorderShare" related="BorderShare" class="twitter-share-button">Tweet</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/BorderShare" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @BorderShare</a>
+        </li>
+        <li>
+          <div data-action="share" data-annotation="bubble", data-href="http://bordershare.gr" class="g-plus"></div>
+        </li>
+        <li>
+          <div class="fb-like" data-href="https://www.facebook.com/bordershare" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" data-width="200"></div>
+        </li>
+      </ul>
+
+    </div>
   </div>
   <h1 class="no-margin-bottom">Places</h1>
   <div class="loader rotating" ng-show="placesCtrl.isLoading"></div>

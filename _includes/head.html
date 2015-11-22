@@ -7,6 +7,12 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <base href="/">
 
+  <meta property="og:url"           content="http://bordershare.gr" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Share resources; Show solidarity with refugees" />
+  <meta property="og:description"   content="BorderShare is an information distributor for anything you can do to help the refugee problem. We collect all the refugee drop-in points for food, clothes and everything they might need." />
+  <meta property="og:image"         content="http://bordershare.gr/assets/img/logo.png" />
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
