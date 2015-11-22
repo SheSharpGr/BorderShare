@@ -56,6 +56,14 @@ header {
   padding: 50px 70px 50px;
 }
 
+.brand a:hover{
+  text-decoration: none;
+}
+
+.brand a:active{
+  text-decoration: none;
+}
+
 .brand-logo{
   float: left;
   margin-right: 25px;
@@ -200,7 +208,7 @@ footer p{
   color: $color-darkbrown;
 }
 
-footer a, a:hover, a:visited{
+footer a, footer a:hover, footer a:visited{
   color: $color-white;
 }
 
