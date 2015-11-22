@@ -4,6 +4,7 @@
 
 // load controllers
 require('../controllers/place.ctrl');
+require('../controllers/place-item.ctrl');
 require('../controllers/users.ctrl');
 
 /**
@@ -15,10 +16,11 @@ require('../controllers/users.ctrl');
 var routeConfig = module.exports = function ($routeProvider, $locationProvider) {
 
   // enable html5 routing
-  $locationProvider.html5Mode({
-    enabled: true,
-    requireBase: false
-  });
+  // $locationProvider.html5Mode({
+  //   enabled: false,
+  //   requireBase: true,
+  // }).hashPrefix('!');
+  $locationProvider.html5Mode(false);
 
   var partialsPath = 'ngtpl/';
 
@@ -31,6 +33,9 @@ var routeConfig = module.exports = function ($routeProvider, $locationProvider) 
     })
     .when('/login', {
       templateUrl: partialsPath + 'login.html',
+    })
+    .when('/place/:placeId', {
+      templateUrl: partialsPath + 'place-single.html',
     })
     .otherwise({
       redirectTo: '/'

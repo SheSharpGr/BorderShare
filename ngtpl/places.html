@@ -1,7 +1,9 @@
 <div class="home" ng-controller="PlacesCtrl as placesCtrl">
   <div class="row">
-    <h1>Welcome</h1>
-    <p>Lorem ipsum dolor sit ame consectetur adipiscing elit. Maecenas enim est, molestie et consectetur nec, dapibus et tellus. Cras at mauris quis turpis egestas scelerisque. Suspendisse at eros dolor. Cras eget massa nulla. Mauris in vehicula nibh. Donec erat lorem, tristique vitae efficitur sed, porttitor luctus arcu. Curabitur faucibus orci enim, vel luctus sapien blandit volutpat.</p>
+    <h1>Welcome / Καλώς Ήρθατε</h1>
+    <p>BorderShare is an information distributor for anything you can do to help the refugee problem. We collect all the refugee drop-in points for food, clothes and everything they might need.</p>
+
+    <p>Το BorderShare διακινεί την πληροφορία σχετικά με το πως μπορείς να βοηθήσεις το πρόβλημα με τους πρόσφυγες. Συγκεντρώνουμε όλα τα σημεία δωρεάς αγαθών προς διανομή σε προσφυγικούς καταυλισμούς. Μπορείς να βοηθήσεις;</p>
   </div>
   <h1 class="no-margin-bottom">Places</h1>
 
@@ -32,6 +34,7 @@
           <div class="collecticons">
             <img src="/assets/img/mark.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
           </div>
+          <div><a ng-href="#place/{[{place.objectId}]}">Go to item</a></div>
         </div>
       </div>
     </div>
