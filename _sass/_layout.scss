@@ -85,6 +85,9 @@ h3{
   margin: 15px 0px;
   border-radius: 5px;
   overflow: hidden;
+  width: 100%;
+  height: 250px;
+  background-color: $color-darkbeige;
 }
 
 .entry-title{
@@ -94,8 +97,23 @@ h3{
 }
 
 .entry-text{
-  background-color: $color-darkbeige;
   padding: 5px 15px;
+}
+
+.entry .available{
+  padding: 2px 0;
+  margin: 2px 0;
+  border-top: 1px dotted $color-lightbrown;
+  border-bottom: 1px dotted $color-lightbrown;
+}
+
+.social{
+  text-align: center;
+}
+
+.social img{
+  max-width: 50px;
+  max-height: 50px;
 }
 
 footer {
