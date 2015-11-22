@@ -22,7 +22,7 @@
     <div class="col-md-3" ng-repeat="place in placesCtrl.places">
       <div class="entry">
         <div class="entry-title">
-          <div class="name" ng-bind="place.name"></div>
+          <a ng-href="/#!/place/{[{place.objectId}]}"><span class="name" ng-bind="place.name"></span></a>
         </div>
         <div class="entry-text">
           <div class="address">
@@ -31,7 +31,6 @@
             <span ng-bind="place.area"></span>
           </div>
           <div class="available" ng-bind="place.available"></div>
-          <div><a ng-href="/#!/place/{[{place.objectId}]}">Go to item</a></div>
           <div class="collecticons">
             <img src="/assets/img/icons/icon-accessories.png" alt="Accessories" title="Accessories" ng-show="place.collectingIcons.accessories">
             <img src="/assets/img/icons/icon-adult-clothes.png" alt="Adult Clothes" title="Adult Clothes" ng-show="place.collectingIcons.adultClothes">
