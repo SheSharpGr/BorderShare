@@ -6,7 +6,8 @@
     <p>Το BorderShare διακινεί την πληροφορία σχετικά με το πως μπορείς να βοηθήσεις το πρόβλημα με τους πρόσφυγες. Συγκεντρώνουμε όλα τα σημεία δωρεάς αγαθών προς διανομή σε προσφυγικούς καταυλισμούς. Μπορείς να βοηθήσεις;</p>
   </div>
   <h1 class="no-margin-bottom">Places</h1>
-  <div class="filters">
+  <div class="loader rotating" ng-show="placesCtrl.isLoading"></div>
+  <div class="filters" ng-show="!placesCtrl.isLoading">
     <ul class="area-filter-items">
       <li>Περιοχές:&nbsp;</li>
       <li ng-repeat="areaFilter in placesCtrl.filterAreaItems">
@@ -16,7 +17,7 @@
       </li>
     </ul>
   </div>
-  <div class="row">
+  <div class="row" ng-show="!placesCtrl.isLoading">
     <!-- ENTRIES -->
     <div class="col-md-3" ng-repeat="place in placesCtrl.places">
       <div class="entry">

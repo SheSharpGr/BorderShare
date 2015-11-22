@@ -22,6 +22,9 @@ var PlacesCtrl = module.exports = function($rootScope, $scope, $log, $location,
   /** @type {Array.<Object>} the places model used by the ui, contains filtered */
   this.places = [];
 
+  /** @type {Boolean} Indicates loading */
+  this.isLoading = true;
+
   /** @type {Array.<Object>} the places model used by the app, contains all */
   this.allPlaces = [];
 
@@ -76,6 +79,8 @@ PlacesCtrl.prototype.setupFilters = Promise.method(function(places) {
   } else {
     this.places = places;
   }
+
+  this.isLoading = false;
 });
 
 /**

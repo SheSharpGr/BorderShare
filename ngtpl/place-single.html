@@ -1,5 +1,7 @@
 <div class="place-item" ng-controller="PlaceItemCtrl as placeItemCtrl">
-  <div class="row">
+  <div class="loader rotating" ng-show="placesCtrl.isLoading"></div>
+
+  <div class="row" ng-show="!placesCtrl.isLoading">
     <div class="col-md-8">
       <table class="table table-bordered">
         <tbody>
@@ -43,7 +45,7 @@
             <td>{[{ placeItemCtrl.place.notes }]}</td>
           </tr>
         </tbody>
-      </table>      
+      </table>
     </div>
   </div>
 </div>
