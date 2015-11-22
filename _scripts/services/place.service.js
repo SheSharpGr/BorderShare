@@ -25,8 +25,6 @@ PlacesService.prototype.get = function () {
   
   return query.find()
     .then(function(results) {
-      // console.log('GOT:', results.toJSON());
-
       var data = [];
       for (var i = 0; i < results.length; i++) {
         var object = results[i];

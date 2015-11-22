@@ -2,8 +2,9 @@
  * @fileOverview The Places controller.
  */
 require('../services/place.service');
+var helpers = require('../util/helpers');
 
-var PlacesCtrl = module.exports = function($scope, $log, $location,
+var PlacesCtrl = module.exports = function($rootScope, $scope, $log, $location,
   placesService) {
 
   $log.log('app.ctrl.PlacesCtrl() :: Init');
@@ -11,8 +12,12 @@ var PlacesCtrl = module.exports = function($scope, $log, $location,
   /** @type {Array} Places records */
   this.data = null;
 
+  this.$rootScope = $rootScope;
   this.$log = $log;
   this.placesService = placesService;
+
+  /** @type {Array.<Object>} the places model used by the ui */
+  this.places = [];
 
   this.initData();
 };
@@ -22,14 +27,16 @@ var PlacesCtrl = module.exports = function($scope, $log, $location,
  *
  */
 PlacesCtrl.prototype.initData = function() {
-  this.placesService.get();
-    // .success(function(data) {
-    //   this.data = data;
-    //   this.$log.log(this.data);
-    // });
+  var self = this;
+  this.placesService.get()
+    .then(function(data) {
+      self.$log.log('app.ctrl.PlacesCtrl() :: Got places:', data.length);
+      self.places = data;
+      helpers.safeApply(self.$rootScope);
+    });
 };
 
 angular.module('app')
-  .controller('PlacesCtrl', ['$scope', '$log', '$location', 'PlacesService',
+  .controller('PlacesCtrl', ['$rootScope', '$scope', '$log', '$location', 'PlacesService',
     PlacesCtrl
   ]);
