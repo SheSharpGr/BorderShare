@@ -6,18 +6,18 @@
     <p>Το BorderShare διακινεί την πληροφορία σχετικά με το πως μπορείς να βοηθήσεις το πρόβλημα με τους πρόσφυγες. Συγκεντρώνουμε όλα τα σημεία δωρεάς αγαθών προς διανομή σε προσφυγικούς καταυλισμούς. Μπορείς να βοηθήσεις;</p>
   </div>
   <h1 class="no-margin-bottom">Places</h1>
-  
-  <div class="filters">
-    <h4>Area Filters</h4>
-    <span>Active: {[{ placesCtrl.activeAreaFilter }]}</span>
+  <div class="loader rotating" ng-show="placesCtrl.isLoading"></div>
+  <div class="filters" ng-show="!placesCtrl.isLoading">
     <ul class="area-filter-items">
+      <li>Περιοχές:&nbsp;</li>
       <li ng-repeat="areaFilter in placesCtrl.filterAreaItems">
         <a ng-href="/" title="Αφαιρέστε τα φίλτρα" ng-bind="placesCtrl.filterAreaItemLabels[$index]" ng-show="areaFilter == 'all'" ng-class="{selectedfilter: placesCtrl.activeAreaFilter === ''}"></a>
         <a ng-href="/?area={[{areaFilter}]}" title="Φιλτράρετε ανά περιοχή" ng-bind="placesCtrl.filterAreaItemLabels[$index]" ng-show="areaFilter != 'all'" ng-class="{selectedfilter: areaFilter === placesCtrl.activeAreaFilter}"></a>
+        <span ng-show="!$last">/</span>
       </li>
     </ul>
   </div>
-  <div class="row">
+  <div class="row" ng-show="!placesCtrl.isLoading">
     <!-- ENTRIES -->
     <div class="col-md-3" ng-repeat="place in placesCtrl.places">
       <div class="entry">
@@ -31,9 +31,30 @@
             <span ng-bind="place.area"></span>
           </div>
           <div class="available" ng-bind="place.available"></div>
-          <div class="collecticons">icon1, icon2</div>
+          <div><a ng-href="/#!/place/{[{place.objectId}]}">Go to item</a></div>
+          <div class="collecticons">
+            <img src="/assets/img/icons/icon-accessories.png" alt="Accessories" title="Accessories" ng-show="place.collectingIcons.accessories">
+            <img src="/assets/img/icons/icon-adult-clothes.png" alt="Adult Clothes" title="Adult Clothes" ng-show="place.collectingIcons.adultClothes">
+            <img src="/assets/img/icons/icon-adult-food.png" alt="Adult Food" title="Adult Food" ng-show="place.collectingIcons.adultFood">
+            <img src="/assets/img/icons/icon-baby-clothes.png" alt="Baby Clothes" title="Baby Clothes" ng-show="place.collectingIcons.babyClothes">
+            <img src="/assets/img/icons/icon-baby-food.png" alt="Baby Food" title="Baby Food" ng-show="place.collectingIcons.babyFood">
+            <img src="/assets/img/icons/icon-blanket.png" alt="Blanket" title="Blanket" ng-show="place.collectingIcons.blanket">
+            <img src="/assets/img/icons/icon-children-clothes.png" alt="Children Clothes" title="Children Clothes" ng-show="place.collectingIcons.childrenClothes">
+            <img src="/assets/img/icons/icon-hygiene-products.png" alt="Hygiene Products" title="Hygiene Products" ng-show="place.collectingIcons.hygiene">
+            <img src="/assets/img/icons/icon-kitchenware.png" alt="Kitchenware" title="Kitchenware" ng-show="place.collectingIcons.kitchenware">
+            <img src="/assets/img/icons/icon-medicine.png" alt="Medicine" title="Medicine" ng-show="place.collectingIcons.medicine">
+            <img src="/assets/img/icons/icon-toys.png" alt="Toys" title="Toys" ng-show="place.collectingIcons.toys">
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="row social">
+    <a href="https://twitter.com/BorderShare">
+      <img class="twitter" src="/assets/img/twitter.png" alt="Twitter">
+    </a>
+    <a href="https://www.facebook.com/bordershare">
+      <img class="facebook" src="/assets/img/facebook.png" alt="Facebook">
+    </a>
   </div>
 </div>
