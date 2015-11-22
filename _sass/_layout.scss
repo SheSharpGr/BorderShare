@@ -31,6 +31,12 @@ body>.container>div>.row{
   padding: 5px 15px;
 }
 
+.tagline {
+  color: $color-beige;
+  position: relative;
+  top: -12px;
+}
+
 .no-margin-bottom{
   margin-bottom: 5px;
 }
@@ -49,14 +55,15 @@ header {
 
 .brand-logo{
   float: left;
+  margin-right: 25px;
 }
 
 .brand-name{
   font-size: 36px;
   font-family: $title-font-family;
   color: $brand-color;
-  float: left;
   padding-left: 25px;
+  margin-bottom: 
 }
 
 .capital{
@@ -85,6 +92,10 @@ h3{
   font-size: 20px;
 }
 
+/**
+ * Site header
+ */
+
 .filters{
   border-top: 1px solid $color-orange;
   border-bottom: 1px solid $color-orange;
@@ -104,15 +115,9 @@ h3{
 
 }
 
-.filters li:before {
-
-}
-
-
-
 .area-filter-items {
-  margin: auto 10px;
-  padding: 0 10px;
+  margin: auto 20px;
+  padding: 0 20px;
 }
 
 .area-filter-items a {
@@ -128,6 +133,10 @@ h3{
   text-decoration: none;
 }
 
+.area-filter-items a:active {
+  text-decoration: none;
+}
+
 footer {
   color: $color-beige;
   background-color: $color-lightbrown;
@@ -139,4 +148,7 @@ footer {
   color: $color-darkbrown;
 }
 
+.area-filter-items.selectedfilter a {  
+  color: $color-darkbrown;
+}
 
