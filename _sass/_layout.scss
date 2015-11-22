@@ -143,6 +143,10 @@ h3{
   padding: 10px 15px;
 }
 
+.entry-title a, .entry-title a:hover, .entry-title a:visited{
+  color: $color-white;
+}
+
 .entry-text{
   padding: 5px 15px;
 }
@@ -218,6 +222,7 @@ footer a, footer a:hover, footer a:visited{
   width: 67px;
   height: 67px;
   background: url('/assets/img/loader.png');
+  margin: auto;
 }
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
@@ -269,7 +274,7 @@ footer a, footer a:hover, footer a:visited{
 
 .collecticons img {
   margin-bottom: 4px;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .collecticons img:hover {
