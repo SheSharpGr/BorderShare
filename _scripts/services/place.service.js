@@ -2,6 +2,7 @@
  * @fileOverview Places Service.
  */
 var Parse = require('parse');
+var Promise = require('bluebird');
 
 /**
  * Places service.
@@ -18,7 +19,7 @@ var PlacesService = module.exports = function ($http) {
  *
  * @return {Promise} A Promise.
  */
-PlacesService.prototype.get = function () {
+PlacesService.prototype.get = Promise.method(function () {
   var Places = Parse.Object.extend('Places');
 
   var query = new Parse.Query(Places);
@@ -33,7 +34,7 @@ PlacesService.prototype.get = function () {
 
       return data;
     });
-};
+});
 
 angular.module('app')
   .service('PlacesService', ['$http',
