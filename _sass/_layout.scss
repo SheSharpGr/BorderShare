@@ -14,11 +14,28 @@ body>.container>div>.row{
   margin: 0;
 }
 
+.entry{
+  margin: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.entry-title{
+  background-color: $color-darkbrown;
+  color: $color-white;
+  padding: 10px 15px;
+}
+
+.entry-text{
+  background-color: $color-darkbeige;
+  padding: 5px 15px;
+}
+
 .no-margin-bottom{
   margin-bottom: 5px;
 }
 
-row{
+.main>div>.row{
   margin-bottom: 50px;
 }
 
@@ -73,6 +90,10 @@ h3{
   border-bottom: 1px solid $color-orange;
   color: $color-darkbrown;
   padding: 10px;
+}
+
+.entry{
+
 }
 
 footer {
