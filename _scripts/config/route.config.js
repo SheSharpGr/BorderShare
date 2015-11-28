@@ -41,6 +41,9 @@ var routeConfig = module.exports = function ($routeProvider, $locationProvider) 
     .when('/dashboard', {
       templateUrl: partialsPath + 'dashboard.html',
     })
+    .when('/place-intake', {
+      templateUrl: partialsPath + 'place-intake.html',
+    })
     .otherwise({
       redirectTo: '/'
     });
