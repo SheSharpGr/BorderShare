@@ -20,9 +20,10 @@ var PlaceIntakeCtrl = module.exports = function($log, placesService) {
  * Submit new place record.
  *
  */
-PlaceIntakeCtrl.prototype.submitNew = Promise.method(function() {
+PlaceIntakeCtrl.prototype.submitNew = Promise.method(function(place) {
 
-  return this.placesService.newPlace()
+  console.log('place', place);
+  return this.placesService.newPlace(place)
     .bind(this)
     .then(function() {
       this.$log.log('app.ctrl.PlaceItemCtrl.submitNew() :: New place record');
