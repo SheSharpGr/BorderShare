@@ -1,0 +1,227 @@
+<div class="place-intake" ng-controller="PlaceIntakeCtrl as placeIntakeCtrl">
+
+  <div class="row">
+    <div class="col-md-8">
+      <form class="form-horizontal">
+        <fieldset>
+
+          <legend>Place intake form</legend>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="name">Name</label>
+            <div class="col-md-4">
+              <input id="name" name="name" placeholder="Your name" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="address1">Address 1</label>
+            <div class="col-md-4">
+              <input id="address1" name="address1" placeholder="Address 1" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="address1">Address 2</label>
+            <div class="col-md-4">
+              <input id="address2" name="address2" placeholder="Address 2" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="area">Area</label>
+            <div class="col-md-4">
+              <input id="area" name="area" placeholder="Area" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="radios">Big Area</label>
+            <div class="col-md-4">
+              <div class="radio">
+                <label for="bigArea-center">
+                  <input name="radios" id="bigArea-center" value="1" checked="checked" type="radio"> Center
+                </label>
+              </div>
+              <div class="radio">
+                <label for="bigArea-east">
+                  <input name="radios" id="bigArea-east" value="2" type="radio"> East
+                </label>
+              </div>
+              <div class="radio">
+                <label for="bigArea-west">
+                  <input name="radios" id="bigArea-west" value="3" type="radio"> West
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="city">City</label>
+            <div class="col-md-4">
+              <input id="city" name="city" placeholder="City" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="zipCode">Zip Code</label>
+            <div class="col-md-4">
+              <input id="zipCode" name="zipCode" placeholder="Zip Code" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="country">Country</label>
+            <div class="col-md-4">
+              <input id="country" name="country" placeholder="Country" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="available">Available</label>
+            <div class="col-md-4">
+              <input id="available" name="available" placeholder="Available" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="collectingIcons">Collecting Icons</label>
+            <div class="col-md-4">
+              <div class="checkbox">
+                <label for="collectingIcons-adultFood">
+                  <input name="checkboxes" id="collectingIcons-adultFood" value="1" type="checkbox"> Adult Food
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="collectingIcons-adultClothes">
+                  <input name="checkboxes" id="collectingIcons-adultClothes" value="1" type="checkbox"> Adult Clothes
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="collectingIcons-blankets">
+                  <input name="checkboxes" id="collectingIcons-blankets" value="1" type="checkbox"> Blankets
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="collectingIcons-childrenClothes">
+                  <input name="checkboxes" id="collectingIcons-childrenClothes" value="1" type="checkbox"> Children Clothes
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="collectingIcons-babyClothes">
+                  <input name="checkboxes" id="collectingIcons-babyClothes" value="1" type="checkbox"> Baby Clothes
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="collectingIcons-babyFood">
+                  <input name="checkboxes" id="collectingIcons-babyFood" value="1" type="checkbox"> Baby Food
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="collectingIcons-medicin">
+                  <input name="checkboxes" id="collectingIcons-medicin" value="1" type="checkbox"> Medicin
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="collectingIcons-kitchenware">
+                  <input name="checkboxes" id="collectingIcons-kitchenware" value="1" type="checkbox"> Kitchenware
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="collectingIcons-hygiene">
+                  <input name="checkboxes" id="collectingIcons-hygiene" value="1" type="checkbox"> Hygiene
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="collectingIcons-accessories">
+                  <input name="checkboxes" id="collectingIcons-accessories" value="1" type="checkbox"> Accessories
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="collectingFull">Collecting Full</label>
+            <div class="col-md-4">
+              <input id="collectingFull" name="collectingFull" placeholder="Collecting Full" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="notes">Notes</label>
+            <div class="col-md-4">
+              <input id="notes" name="notes" placeholder="Notes" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="organization">Organization</label>
+            <div class="col-md-4">
+              <input id="organization" name="organization" placeholder="Organization" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="collectingFull">Telephone 1</label>
+            <div class="col-md-4">
+              <input id="telephone1" name="telephone1" placeholder="Telephone 1" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="telephone2">Telephone 2</label>
+            <div class="col-md-4">
+              <input id="telephone2" name="telephone2" placeholder="Telephone 2" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="telephone3">Telephone 3</label>
+            <div class="col-md-4">
+              <input id="telephone3" name="telephone3" placeholder="Telephone 3" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="telephone4">Telephone 4</label>
+            <div class="col-md-4">
+              <input id="telephone4" name="telephone4" placeholder="Telephone 4" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="email1">Email 1</label>
+            <div class="col-md-4">
+              <input id="email1" name="email1" placeholder="Email 1" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="email2">Email 2</label>
+            <div class="col-md-4">
+              <input id="email2" name="email2" placeholder="Email 2" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="website1">Website 1</label>
+            <div class="col-md-4">
+              <input id="website1" name="website1" placeholder="Website 1" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="website2">Website 2</label>
+            <div class="col-md-4">
+              <input id="website2" name="website2" placeholder="Website 2" class="form-control input-md" type="text">
+            </div>
+          </div>
+
+          <input type="submit" class="btn btn-default">Submit</input>
+
+        </fieldset>
+      </form>
+
+    </div>
+  </div>
+</div>
