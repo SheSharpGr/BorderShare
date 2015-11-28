@@ -64,15 +64,13 @@ PlacesService.prototype.newPlace = Promise.method(function (placeObject) {
   var Places = Parse.Object.extend('Places');
   var places = new Places();
 
-  places.save(placeObject, {
+  var self = this;
+  return places.save(placeObject, {
     success: function(places) {
-      // The object was saved successfully.
-      console.log('success', places);
+      self.$log.log('app.service.PlacesService.newPlace() :: New place record: ', places);
     },
     error: function(places, error) {
-      // The save failed.
-      // error is a Parse.Error with an error code and message.
-      console.log('error', error);
+      self.$log.log('app.service.PlacesService.newPlace() :: New place record error: ', error);
     }
   });
 });
