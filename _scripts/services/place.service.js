@@ -55,6 +55,28 @@ PlacesService.prototype.get = Promise.method(function () {
     });
 });
 
+/**
+ * Set new place record.
+ *
+ * @return {Promise} A Promise.
+ */
+PlacesService.prototype.newPlace = Promise.method(function (placeObject) {
+  var Places = Parse.Object.extend('Places');
+  var places = new Places();
+
+  places.save(placeObject, {
+    success: function(places) {
+      // The object was saved successfully.
+      console.log('success', places);
+    },
+    error: function(places, error) {
+      // The save failed.
+      // error is a Parse.Error with an error code and message.
+      console.log('error', error);
+    }
+  });
+});
+
 angular.module('app')
   .service('PlacesService', ['$http', '$log',
     PlacesService
