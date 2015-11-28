@@ -10,9 +10,9 @@ var Promise = require('bluebird');
  * @constructor
  */
 var PlaceIntakeCtrl = module.exports = function($log, placesService) {
-
   $log.log('app.ctrl.PlaceIntakeCtrl.Ctor() :: Init');
 
+  this.$log = $log;
   this.placesService = placesService;
 };
 
@@ -21,15 +21,10 @@ var PlaceIntakeCtrl = module.exports = function($log, placesService) {
  *
  */
 PlaceIntakeCtrl.prototype.submitNew = Promise.method(function(place) {
+  // Stringify collectingIcons object/param because Parse stores it as a string.
+  place.collectingIcons = JSON.stringify(place.collectingIcons);
 
-  console.log('place', place);
-  return this.placesService.newPlace(place)
-    .bind(this)
-    .then(function() {
-      this.$log.log('app.ctrl.PlaceItemCtrl.submitNew() :: New place record');
-      return;
-    });
-
+  return this.placesService.newPlace(place);
 });
 
 angular.module('app')
