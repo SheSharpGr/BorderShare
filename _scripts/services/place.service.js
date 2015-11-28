@@ -34,11 +34,14 @@ PlacesService.prototype.get = Promise.method(function () {
 
   var self = this;
   return query.find()
-    .then(function(results) {
+    .then(function(placeItems) {
       var data = [];
-      for (var i = 0; i < results.length; i++) {
-        var object = results[i];
-        var jsonObj = object.toJSON();
+
+      for (var i = 0; i < placeItems.length; i++) {
+        var placeItem = placeItems[i];
+
+        var jsonObj = placeItem.toJSON();
+
         try {
           jsonObj.collectingIcons = JSON.parse(jsonObj.collectingIcons);
         } catch (e) {

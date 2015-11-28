@@ -4,9 +4,15 @@
 
 var Parse = require('parse');
 
-var UsersCtrl = module.exports = function($scope, $log) {
+var helpers = require('../util/helpers');
+
+var UsersCtrl = module.exports = function($rootScope, $scope, $location, $log) {
 
   $log.log('app.ctrl.UsersCtrl() :: Init');
+
+  this.$log = $log;
+  this.$rootScope = $rootScope;
+  this.$location = $location;
 
   /** @type {Object} User data object */
   this.user = {
@@ -15,7 +21,14 @@ var UsersCtrl = module.exports = function($scope, $log) {
     password: null,
   };
 
-  this.$log = $log;
+  /** @type {Boolean} Indicates login error */
+  this.loginError = false;
+
+  // check if already logged in and redirect to dashboard
+  var currentUser = Parse.User.current();
+  if (currentUser) {
+    $location.path('/dashboard');
+  }
 };
 
 /**
@@ -46,23 +59,28 @@ UsersCtrl.prototype.signup = function() {
 };
 
 /**
- * ...
+ * Perform user login.
  *
  */
 UsersCtrl.prototype.login = function() {
+  this.loginError = false;
+  var self = this;
   Parse.User.logIn(this.user.email, this.user.password, {
-  success: function(user) {
-    // Do stuff after successful login.
-    console.log('userrrrr', user);
-  },
-  error: function(user, error) {
-    // The login failed. Check error to see why.
-    console.log('Error: ' + error.code + ' ' + error.message);
-  }
-});
+    success: function() {
+      // Do stuff after successful login.
+      self.$location.path('/dashboard');
+    },
+    error: function(user, error) {
+      self.loginError = true;
+      // The login failed. Check error to see why.
+      self.$log.log('app.ctrl.login() :: Error logging in, code:', error.code,
+        'message:', error.message);
+      helpers.safeApply(self.$rootScope);
+    }
+  });
 };
 
 angular.module('app')
-  .controller('UsersCtrl', ['$scope', '$log',
+  .controller('UsersCtrl', ['$rootScope', '$scope', '$location', '$log',
     UsersCtrl
   ]);
