@@ -6,6 +6,7 @@
 require('../controllers/place.ctrl');
 require('../controllers/place-item.ctrl');
 require('../controllers/users.ctrl');
+require('../controllers/dashboard.ctrl');
 
 /**
  * Application configuration, adding routes.
@@ -36,6 +37,9 @@ var routeConfig = module.exports = function ($routeProvider, $locationProvider) 
     })
     .when('/place/:placeId', {
       templateUrl: partialsPath + 'place-single.html',
+    })
+    .when('/dashboard', {
+      templateUrl: partialsPath + 'dashboard.html',
     })
     .otherwise({
       redirectTo: '/'

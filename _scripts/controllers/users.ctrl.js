@@ -6,12 +6,13 @@ var Parse = require('parse');
 
 var helpers = require('../util/helpers');
 
-var UsersCtrl = module.exports = function($rootScope, $scope, $log) {
+var UsersCtrl = module.exports = function($rootScope, $scope, $location, $log) {
 
   $log.log('app.ctrl.UsersCtrl() :: Init');
 
   this.$log = $log;
   this.$rootScope = $rootScope;
+  this.$location = $location;
 
   /** @type {Object} User data object */
   this.user = {
@@ -23,6 +24,11 @@ var UsersCtrl = module.exports = function($rootScope, $scope, $log) {
   /** @type {Boolean} Indicates login error */
   this.loginError = false;
 
+  // check if already logged in and redirect to dashboard
+  var currentUser = Parse.User.current();
+  if (currentUser) {
+    $location.path('/dashboard');
+  }
 };
 
 /**
@@ -60,9 +66,9 @@ UsersCtrl.prototype.login = function() {
   this.loginError = false;
   var self = this;
   Parse.User.logIn(this.user.email, this.user.password, {
-    success: function(user) {
+    success: function() {
       // Do stuff after successful login.
-      console.log('userrrrr', user);
+      self.$location.path('/dashboard');
     },
     error: function(user, error) {
       self.loginError = true;
@@ -75,6 +81,6 @@ UsersCtrl.prototype.login = function() {
 };
 
 angular.module('app')
-  .controller('UsersCtrl', ['$rootScope', '$scope', '$log',
+  .controller('UsersCtrl', ['$rootScope', '$scope', '$location', '$log',
     UsersCtrl
   ]);
