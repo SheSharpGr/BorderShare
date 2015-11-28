@@ -7,6 +7,7 @@ require('../controllers/place.ctrl');
 require('../controllers/place-item.ctrl');
 require('../controllers/users.ctrl');
 require('../controllers/dashboard.ctrl');
+require('../controllers/place-intake.ctrl');
 
 /**
  * Application configuration, adding routes.
