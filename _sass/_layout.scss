@@ -85,12 +85,16 @@ header {
 }
 
 body>.container>.main{
+  /*padding: 70px 70px;*/
+}
+
+.main .content {
   padding: 70px 70px;
 }
 
 h1, h2, h3{
   color: $color-lightbrown;
-  font-family: $title-font-family;
+  font-family: $headers-font-family;
 }
 
 h1{
