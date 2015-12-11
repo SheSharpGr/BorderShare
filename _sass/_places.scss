@@ -1,0 +1,27 @@
+.main .hero {
+  width: 100%;
+  /*max-height: 400px;*/
+  background: url('/assets/img/hero.png') no-repeat top left;
+  padding: 70px;
+  color: $color-lightbrown;
+}
+
+.main .hero h1 {
+  color: $color-lightbrown;
+  font-family: $base-font-family;
+  font-size: 18px;
+}
+
+.main .hero p {
+  color: $color-darkbrown;
+  font-family: $headers-font-family;
+  font-size: 30px;
+}
+
+.main .hero .row {
+  margin-bottom: 0px;
+}
+
+.main .hero .share ul {
+  margin-left: 0px;
+}

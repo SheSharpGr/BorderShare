@@ -15,6 +15,7 @@ $color-white: #fff;
 $color-black: #000;
 
 $title-font-family: "Patua One", "Times New Roman", serif;
+$headers-font-family: "Noto Serif", "Times New Roman", serif;
 $base-font-family: "Noto Sans", Arial, sans-serif;
 $base-font-size:   14px;
 $small-font-size:  $base-font-size * 0.875;
@@ -56,5 +57,6 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "boot",
-        "layout"
+        "layout",
+        "places"
 ;

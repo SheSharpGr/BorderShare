@@ -7,38 +7,48 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="home" ng-controller="PlacesCtrl as placesCtrl">
-  <div class="row">
+<div class="hero">
+    <h1>Θες να βοηθήσεις τους πρόσφυγες;</h1>
+    <p>
+        Όλα τα σημεία<br/>
+        συγκέντρωσης &amp; διανομής αγαθών<br/>
+        σε ένα μέρος!
+    </p>
+    <div class="row">
+      <div class="col-lg-8"></div>
+      <div class="col-lg-4 share">
+        Share the love
+        <ul class="nav">
+          <li>
+            <a href="https://twitter.com/share" data-url="http://bordershare.gr/" data-text="Share resources; Show solidarity with refugees " data-size="medium" via="BorderShare" related="BorderShare" class="twitter-share-button">Tweet</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/BorderShare" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @BorderShare</a>
+          </li>
+          <li>
+            <div data-action="share" data-annotation="bubble", data-href="http://bordershare.gr" class="g-plus"></div>
+          </li>
+          <li>
+            <div class="fb-like" data-href="https://www.facebook.com/bordershare" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" data-width="200"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+<div class="home content" ng-controller="PlacesCtrl as placesCtrl">
+  <!-- <div class="row">
+    <img class="hero" src="/assets/img/hero.png" alt="Logo">
     <h1>Welcome / Καλώς Ήρθατε</h1>
     <p>BorderShare is an information distributor for anything you can do to help the refugee problem. We collect all the refugee drop-in points for food, clothes and everything they might need.</p>
 
     <p>Το BorderShare διακινεί την πληροφορία σχετικά με το πως μπορείς να βοηθήσεις το πρόβλημα με τους πρόσφυγες. Συγκεντρώνουμε όλα τα σημεία δωρεάς αγαθών προς διανομή σε προσφυγικούς καταυλισμούς. Μπορείς να βοηθήσεις;</p>
-  </div>
-  <h3>Share the love</h3>
-  <div class="row">
-    <div class="col-lg-8 share">
-      <ul class="nav">
-        <li>
-          <a href="https://twitter.com/share" data-url="http://bordershare.gr/" data-text="Share resources; Show solidarity with refugees " data-size="medium" via="BorderShare" related="BorderShare" class="twitter-share-button">Tweet</a>
-        </li>
-        <li>
-          <a href="https://twitter.com/BorderShare" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @BorderShare</a>
-        </li>
-        <li>
-          <div data-action="share" data-annotation="bubble", data-href="http://bordershare.gr" class="g-plus"></div>
-        </li>
-        <li>
-          <div class="fb-like" data-href="https://www.facebook.com/bordershare" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" data-width="200"></div>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-  <h1 class="no-margin-bottom">Places</h1>
+  </div> -->
+  <h1 class="no-margin-bottom">Περιοχές</h1>
   <div class="loader rotating" ng-show="placesCtrl.isLoading"></div>
   <div class="filters" ng-show="!placesCtrl.isLoading">
     <ul class="area-filter-items">
-      <li>Περιοχές:&nbsp;</li>
+      <li><!--Περιοχές:&nbsp;--></li>
       <li ng-repeat="areaFilter in placesCtrl.filterAreaItems">
         <a ng-href="/" title="Αφαιρέστε τα φίλτρα" ng-bind="placesCtrl.filterAreaItemLabels[$index]" ng-show="areaFilter == 'all'" ng-class="{selectedfilter: placesCtrl.activeAreaFilter === ''}"></a>
         <a ng-href="/?area={[{areaFilter}]}" title="Φιλτράρετε ανά περιοχή" ng-bind="placesCtrl.filterAreaItemLabels[$index]" ng-show="areaFilter != 'all'" ng-class="{selectedfilter: areaFilter === placesCtrl.activeAreaFilter}"></a>
